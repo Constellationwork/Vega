@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+   vega job:
+     runs-on: ubuntu-latest
+     steps:
+       - name: ant-build
+       run: echo "compile"
+       shell: bash
+      
