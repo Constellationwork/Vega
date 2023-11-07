@@ -1,3 +1,5 @@
+name: Your Workflow Name
+
 on:
   push:
     branches:
@@ -8,10 +10,10 @@ on:
   workflow_dispatch:
 
 jobs:
-   vega job:
-     runs-on: ubuntu-latest
-     steps:
-       - name: ant-build
-       run: echo "compile"
-       shell: bash
-      
+  vega_job: # Remove the space and use an underscore
+    runs-on: ubuntu-latest
+    steps:
+      - name: ant-build
+        run: echo "compile"
+        shell: bash
+
