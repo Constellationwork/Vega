@@ -14,15 +14,15 @@ jobs:
         uses: actions/checkout@v2
 
       # Trigger builds in other repositories using repository_dispatch
-      - name: Trigger Build in Repository A
+      - name: Trigger Build in pollux
         uses: peter-evans/repository-dispatch@v1
         with:
-          repository: repository-a-owner/repository-a
+          repository: constellation/pollux
           event-type: build
 
-      - name: Trigger Build in Repository B
+      - name: Trigger Build in capella
         uses: peter-evans/repository-dispatch@v1
         with:
-          repository: repository-b-owner/repository-b
+          repository: constellation/capella
           event-type: build
 
